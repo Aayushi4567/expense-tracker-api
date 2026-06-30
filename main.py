@@ -5,15 +5,16 @@ import uuid
 
 app = FastAPI()
 
-# defining what an expense looks like
+
 class Expense(BaseModel):
     title: str
     amount: float
     category: str
     description: Optional[str] = None
-
+    
 # storing expenses in a list for now
 # will connect to a proper database later
+
 expenses = []
 
 
